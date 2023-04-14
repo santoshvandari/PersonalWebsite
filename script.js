@@ -1,13 +1,5 @@
-/**
-* Template Name: DevFolio
-* Updated: Mar 10 2023 with Bootstrap v5.2.3
-* Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 (function() {
   "use strict";
-
   /**
    * Easy selector helper function
    */
@@ -19,7 +11,6 @@
       return document.querySelector(el)
     }
   }
-
   /**
    * Easy event listener function
    */
@@ -33,14 +24,12 @@
       }
     }
   }
-
   /**
    * Easy on scroll event listener 
    */
   const onscroll = (el, listener) => {
     el.addEventListener('scroll', listener)
   }
-
   /**
    * Navbar links active state on scroll
    */
@@ -60,25 +49,21 @@
   }
   window.addEventListener('load', navbarlinksActive)
   onscroll(document, navbarlinksActive)
-
   /**
    * Scrolls to an element with header offset
    */
   const scrollto = (el) => {
     let header = select('#header')
     let offset = header.offsetHeight
-
     if (!header.classList.contains('header-scrolled')) {
       offset -= 16
     }
-
     let elementPos = select(el).offsetTop
     window.scrollTo({
       top: elementPos - offset,
       behavior: 'smooth'
     })
   }
-
   /**
    * Toggle .header-scrolled class to #header when page is scrolled
    */
@@ -94,7 +79,6 @@
     window.addEventListener('load', headerScrolled)
     onscroll(document, headerScrolled)
   }
-
   /**
    * Back to top button
    */
@@ -110,7 +94,6 @@
     window.addEventListener('load', toggleBacktotop)
     onscroll(document, toggleBacktotop)
   }
-
   /**
    * Mobile nav toggle
    */
@@ -119,7 +102,6 @@
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
   })
-
   /**
    * Mobile nav dropdowns activate
    */
@@ -129,14 +111,12 @@
       this.nextElementSibling.classList.toggle('dropdown-active')
     }
   }, true)
-
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
   on('click', '.scrollto', function(e) {
     if (select(this.hash)) {
       e.preventDefault()
-
       let navbar = select('#navbar')
       if (navbar.classList.contains('navbar-mobile')) {
         navbar.classList.remove('navbar-mobile')
@@ -147,7 +127,6 @@
       scrollto(this.hash)
     }
   }, true)
-
   /**
    * Scroll with ofset on page load with hash links in the url
    */
@@ -158,7 +137,6 @@
       }
     }
   });
-
   /**
    * Intro type effect
    */
@@ -172,49 +150,12 @@
       backDelay: 2000
     });
   }
-
   /**
    * Initiate portfolio lightbox 
    */
   const portfolioLightbox = GLightbox({
     selector: '.portfolio-lightbox'
   });
-
-  /**
-   * Testimonials slider
-   */
-  new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
-  });
-
-  /**
-   * Portfolio details slider
-   */
-  new Swiper('.portfolio-details-slider', {
-    speed: 400,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
-  });
-
   /**
    * Preloader
    */
@@ -224,7 +165,6 @@
       preloader.remove()
     });
   }
-
   /**
    * Initiate Pure Counter 
    */
