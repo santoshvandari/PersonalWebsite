@@ -157,6 +157,7 @@ a:hover {
 }
 .socials ul li {
   display: inline-block;
+  margin-top: 10px;
 }
 .socials .ico-circle {
   display: flex;
