@@ -297,8 +297,10 @@ a:hover {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #f2f2f2;
+  border: 6px solid #aaa8a8;
   border-top: 6px solid #0078ff;
+  border-right: 6px solid #16a716;
+  border-bottom: 6px solid #f33e3e;
   border-radius: 50%;
   width: 60px;
   height: 60px;
