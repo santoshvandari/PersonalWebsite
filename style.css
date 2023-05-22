@@ -218,6 +218,9 @@ a:hover {
   background-color: #1B1B1B;
   width: 25px;
 }
+.lead{
+  text-align: justify;
+}
 .back-to-top {
   position: fixed;
   visibility: hidden;
