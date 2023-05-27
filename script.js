@@ -117,7 +117,7 @@
   const portfolioLightbox = GLightbox({
     selector: '.portfolio-lightbox'
   });
-  let preloader = select('.loader-wrapper');
+  let preloader = select('#preloader');
   if (preloader) {
     window.addEventListener('load', () => {
       preloader.remove()
