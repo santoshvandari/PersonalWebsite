@@ -18,6 +18,7 @@ body{
   width: 100%;
   text-align: center;
   min-height: 100vh;
+  padding: 10px 0;
 }
 .wrapper{
   display: flex;
@@ -28,12 +29,17 @@ body{
   min-height: 100vh;
   position: relative;
 }
-.img img{
+.img{
   height: 35rem;
   width: 35rem;
-  border-radius: 50%;
   border: 10px solid var(--white);
-  object-fit: contain;
+  border-radius: 50%;
+  background: url("/img/image.jpg") center center/cover;
+}
+.img img{
+  width: 100%;
+  border: 10px solid var(--white);
+  border-radius: 50%;
 }
 .info h1{
   color: var(--lightaqua);
