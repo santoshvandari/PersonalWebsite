@@ -10,10 +10,17 @@ document.addEventListener("DOMContentLoaded",function(){
 })
 //image Changing Animation
 let img = document.querySelector(".img");
+let i=2;
 setInterval(() => {
-  if(img.classList.contains("img1")){
-    img.classList.remove("img1");
+  if(i==13)
+    i=1;
+  let styledata=`background: url('/img/img${i}.jpg') center center/cover;`;
+  if(i%2){
+    styledata+="transform: rotatey(360deg);"
   }else{
-    img.classList.add("img1");
+  styledata+="transform: rotatey(720deg);"
   }
+  console.log(styledata);
+  img.style=styledata;
+  i++;
 }, 5000);

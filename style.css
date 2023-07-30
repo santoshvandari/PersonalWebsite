@@ -37,11 +37,6 @@ body{
   background: url("/img/img1.jpg") center center/cover;
   transition: all 0.2s ease-in-out;
 }
-.img1{
-  background: url("img/img2.jpg") center center/cover;
-  transition: all 0.2s ease-in-out;
-  transform: rotatey(360deg);
-}
 .info h1{
   color: var(--lightaqua);
   font-size: 5rem;
