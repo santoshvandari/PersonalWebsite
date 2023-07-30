@@ -22,5 +22,5 @@ document.addEventListener("DOMContentLoaded",function(){
     console.log(styledata);
     img.style=styledata;
     i++;
-  }, 5000);
+  }, 1000);
 })
