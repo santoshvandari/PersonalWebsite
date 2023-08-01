@@ -1,0 +1,77 @@
+@media screen and (max-width: 1652px) {
+    nav h1::after{
+        content: " Multiple campus";
+    }    
+}@media screen and (max-width: 1330px) {
+    nav h1::after{
+        content: " campus";
+    }
+    
+}@media screen and (max-width: 1000px) {
+    nav h1{
+        font-size: 45px;
+    };
+}
+@media screen and (max-width: 805px) {
+    nav h1{
+        font-size: 60px;
+    }
+    nav h1::after{
+        content: "";
+    }
+}
+@media screen and (max-width: 700px) {
+    nav{
+        padding: 0px 5;
+    }
+    nav h1{
+        font-size:50px;
+        margin: 0px 10px;
+    }
+    nav img{
+        height: 75px;
+    } 
+    footer{
+        padding: 10px 20px;
+    }
+    .left p, .right p,.right p a{
+        font-size: 18px;
+    }  
+}
+@media screen and (max-width: 560px) {
+    nav h1{
+        font-size: 35px;
+    }
+    nav img{
+        height: 60px;
+    }
+    section h3{
+        font-size: 28px;
+    }
+    section p{
+        font-size: 18px;
+    }
+    footer{
+        flex-direction: column;
+    }
+    .left,.right p{
+        text-align: center;
+    }
+}
+@media screen and (max-width: 364px) {
+    nav h1{
+        font-size: 35px;
+        flex-direction: row;
+        order: 3;
+    }
+    nav .kanakailogo{
+        display: none;
+    }
+    .about-fsu a{
+        font-size: 20px;
+        padding: 8px 15px;
+    }
+    section h3{
+        font-weight: 600;
+    }
+}

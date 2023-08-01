@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --white:#fff;
+    --bg-color:#2c3e50;
+    --btn-bg:#4b95cf;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+/* Header Section Start */
+header,footer{
+    background:var(--bg-color);
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    padding: 0 10px;
+}
+nav h1{
+    font-size: 60px;
+    text-transform: uppercase;
+    color: var(--white);
+    margin: 0px 30px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-align: center;
+}
+nav h1::after{
+    content: " multiple Campus Surunga";
+}
+nav img{
+    height: 85px;
+    border-radius: 5px;
+}
+/* Header Section End */
+/* Main Section Start */
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+hr{
+    width: 100%;
+}
+section{
+    width: 90%;
+    margin: 30px 0;
+}
+section h3{
+    font-size: 50px;
+    font-weight: 500;
+    text-decoration: underline;
+    text-align: center;
+    margin: 15px 0;
+}
+main section p{
+    font-size: 20px;
+    text-align: justify;
+}
+/* About FSU Section Start */
+.about-fsu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about-fsu a{
+    color: #fff;
+    background: var(--btn-bg);
+    font-size: 25px;
+    text-align: center;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    margin: 20px 0 0;
+    border: 2px solid var(--btn-bg);
+    transition: all 0.2s linear;
+}
+.about-fsu a:hover{
+    background: var(--white);
+    color: #000;
+}
+.about-fsu a:active{
+    border-color: transparent;
+    color: var(--btn-bg);
+}
+/* About FSU Section End */
+
+
+.name{
+    text-align: right;
+    font-size: 25px;
+    font-style: italic;
+    margin: 10px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer Starts Here */
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 150px;
+    padding: 10px 50px;
+    color: var(--white);
+}
+footer div{
+    margin: 10px 20px;
+}
+.left ul li{
+    list-style-type: none;
+    margin: 5px 0;
+}
+.left ul li a,.right p a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    position: relative;
+}
+.left ul li a:before,.right p a:before{
+    border-radius: 5px;
+    content: "";
+    height: 2px;
+    width: 0px;
+    background:var(--white);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 0.3s linear;
+}
+.left ul li a:hover::before, .right p a:hover::before{
+    width: 100%;
+}
+.left ul li a:active,.right p a:active{
+    color: transparent;
+}
+.right p{
+    line-height: 30px;
+    font-size: 20px;
+    text-align:right;
+}
+.right p a{
+    color: #c3f5ff;
+    font-size: 21px;
+    font-style: italic;
+}
+.right p a:hover::before{
+    background: #c3f5ff;
+}
+/* Footer Ends Here */
