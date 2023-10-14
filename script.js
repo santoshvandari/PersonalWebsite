@@ -10,7 +10,6 @@
 // })
 
 function QuotesFetch(){
-
     let url='https://type.fit/api/quotes';
     fetch(url)
     .then(response=>response.json())
@@ -23,6 +22,5 @@ function QuotesFetch(){
         console.log(error);
     })
 }
-
 QuotesFetch();
 let Random = (mix,max)=> Math.floor(Math.random()*(max-mix+1)+mix);
