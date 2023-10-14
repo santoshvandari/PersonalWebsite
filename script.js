@@ -17,6 +17,7 @@ function QuotesFetch(){
     .then(response=>{
         document.getElementById("quotes").textContent = response[Random(0,16)].text;
         document.getElementById("author").textContent = "- "+(response[Random(0,16)].author).split(',')[0];
+        setTimeout(QuotesFetch,10000);
     })
     .catch(error=>{
         console.log(error);
