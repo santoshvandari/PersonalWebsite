@@ -12,9 +12,9 @@
 
 
 function QuotesFetch(){
-    URL='https://api.quotable.io/random';
+    // URL='https://api.quotable.io/random';
   /* margin: 10px 0; */
-    URL='https://zenquotes.io/api/quotes';
+    let url='https://zenquotes.io/api/quotes';
     fetch(url)
     .then(response=>response.json())
     .then(response=>{
@@ -24,3 +24,5 @@ function QuotesFetch(){
         console.log(error);
     })
 }
+
+QuotesFetch();
