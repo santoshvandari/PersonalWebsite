@@ -1,4 +1,4 @@
-// "use strict"
+"use strict"
 // document.addEventListener("DOMContentLoaded",function(){
 //   // Auto typing text 
 //   let typing =  new Typed("#type",{
@@ -8,3 +8,7 @@
 //       loop: true
 //   })
 // })
+
+
+
+
