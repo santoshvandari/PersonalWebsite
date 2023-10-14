@@ -9,16 +9,14 @@
 //   })
 // })
 
-
-
 function QuotesFetch(){
-    // URL='https://api.quotable.io/random';
-  /* margin: 10px 0; */
-    let url='https://zenquotes.io/api/quotes';
+
+    let url='https://type.fit/api/quotes';
     fetch(url)
     .then(response=>response.json())
     .then(response=>{
-        console.log(response);
+        document.getElementById("quotes").textContent = response[Random(0,16)].text;
+        document.getElementById("author").textContent = "- "+(response[Random(0,16)].author).split(',')[0];
     })
     .catch(error=>{
         console.log(error);
@@ -26,3 +24,4 @@ function QuotesFetch(){
 }
 
 QuotesFetch();
+let Random = (mix,max)=> Math.floor(Math.random()*(max-mix+1)+mix);
