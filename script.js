@@ -24,4 +24,5 @@ function QuotesFetch(){
     })
 }
 QuotesFetch();
+//Return The Random Number based on the provided max and min value.
 let Random = (mix,max)=> Math.floor(Math.random()*(max-mix+1)+mix);
