@@ -44,19 +44,15 @@ body{
   font-weight: 500;
   animation: slide 3s linear .1s infinite alternate;
 }
-/* .info h3{
-  height: 3rem;
-  color: var(--white);
-  font-size: 3rem;
-} */
-
 .info p{
   color: var(--darkwhite);
   font-size: 2rem;
   transition: all 0.2s ease-in-out;
+  padding: 0px 5px;
 }
 .info #author{
   margin-top: 10px;
+  margin-right: 5px;
   text-align: right;
 }
 .contact{
