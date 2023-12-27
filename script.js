@@ -1,5 +1,6 @@
 "use strict";
 (() => {
+    document.querySelector('div.preloader').addEventListener()
         function QuotesFetch() {
             let url = 'https://quotesapi.santosh0.com.np/api/quotes/';
             fetch(url)
