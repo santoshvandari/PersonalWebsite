@@ -1,7 +1,9 @@
 "use strict";
 (() => {
-    document.querySelector('div.preloader').addEventListener()
-        function QuotesFetch() {
+    window.addEventListener('load',()=>{
+        document.querySelector("div.preloader").style.display = "none";
+    })
+    function QuotesFetch() {
             let url = 'https://quotesapi.santosh0.com.np/api/quotes/';
             fetch(url)
                 .then(response => response.json())
