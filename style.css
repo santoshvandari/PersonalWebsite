@@ -34,7 +34,7 @@ body{
   width: 35rem;
   border: 10px solid var(--white);
   border-radius: 50%;
-  background: url("/img/img.jpg") center center/cover;
+  background: url("img/img.jpg") center center/cover;
   transition: all 0.2s ease-in-out;
 }
 .info h1{
