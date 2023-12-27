@@ -106,3 +106,29 @@ body{
       margin:.6rem;
   }
 }
+/* Preloader */
+div.preloader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.preloader .loader{
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: 5px solid var(--grey);
+  border-top-color: var(--lightaqua);
+  animation: spin 1s linear infinite;
+}
+@keyframes spin{
+  to{
+      transform: rotate(360deg);
+  }
+}
