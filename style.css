@@ -20,7 +20,25 @@ body{
   max-height: 100vh;
   padding: 10px 0;
 }
-.wrapper{
+main{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main p{
+  font-size: 50px;
+  color: var(--darkwhite);
+  font-weight: bold;
+  text-align: center;
+  border: 10px dashed var(--darkwhite);
+  border-left: none;
+  border-right: none;
+  padding: 20px 0;
+  width: 100%;
+}
+
+/* .wrapper{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -84,7 +102,9 @@ body{
 .bi:active{
   opacity: .5;
 }
-/* Responsive Code */
+
+
+Responsive Code
 @media screen and (max-width:360px) {
   html{
       font-size: 8px;
@@ -106,7 +126,7 @@ body{
       margin:.6rem;
   }
 }
-/* Preloader */
+Preloader
 div.preloader{
   position: fixed;
   top: 0;
@@ -131,4 +151,4 @@ div.preloader .loader{
   to{
       transform: rotate(360deg);
   }
-}
+} */
