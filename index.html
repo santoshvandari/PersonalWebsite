@@ -1,44 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Santosh Bhandari || Personal Website</title>
     <meta name="description" content="Personal Website of Santosh Bhandari">
     <meta name="keywords" content="Santosh Bhandari, Santosh, Bhandari, Personal Website of Santosh Bhandari, Santosh Bhandari Personal Website">
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-    <title>Santosh Bhandari || Personal Website</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script defer src="script.js"></script>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script defer src="js/script.js"></script>
 </head>
 <body>
-
-    <!-- <div class="wrapper">
-        <div class="img">
-        </div>
-        <div class="info">
-            <h1>Santosh Bhandari</h1> -->
-            <!-- <h3><span id="type">Web Developer</span></h3> -->
-            <!-- <p id="quotes">Loading...</p>
-            <p id="author"></p>
-        </div>
-        <div class="contact">
-            <p>Get in Touch</p>
-            <div class="social">
-                <a href="https://twitter.com/santoshvandari" target="_blank"><i class="bi bi-twitter"></i></a>
-                <a href="https://www.instagram.com/santosh.vandari" target="_blank"><i class="bi bi-instagram"></i></a>
-                <a href="https://github.com/santoshvandari" target="_blank"><i class="bi bi-github"></i></a>
-                <a href="https://www.reddit.com/user/santosh-vandari" target="_blank"><i class="bi bi-reddit"></i></a>
+    <header class="">
+        <nav>
+            <div class="logo">
+                <h1><a href="#home">Santosh Bhandari</a></h1>
             </div>
-        </div>
-    </div>
+            <ul class="">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-option">
+                    <i class="bi bi-list" id="menu"></i>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="home" >
+            <div class="container">
+                <div class="image" data-aos="fade-up">
+                    <img src="img/img.png"  alt="Santosh Bhandari">
+                </div>
+                <div class="name" data-aos="fade-up">
+                    <h3>I'm <span>Santosh Bhandari</span></h3>
+                    <p><span id="typing">Web Developer</span></p>
+                </div>
+                <div class="scroll">
+                    <div class="scroll-btn">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about" >
+            <h3 class="heading">About</h3>
+            <div class="about-wrapper" data-aos="fade-up">
+                <div class="para">
+                    <p>Hello!! I am Santosh Bhandari, A Web Developer with a passion for learning different tech. With Learning a years about a different technology, I have Gain skills in Web Development using the Tech Stack of Django. I am constantly seeking new challenges and opportunities to grow and learn in my field.</p>
+                </div>
+                <button><a href="img/cv.pdf" download="">Download CV</a></button>
+            </div>
+        </section>
+        <section id="services">
+            <h3 class="heading">Services</h3>
+            <div class="services-wrapper">
+                <div class="cards">
+                    <div class="card" data-aos="fade-up">
+                        <span class="icons"><i class="bi bi-code"></i></span>
+                        <p class="title">Web Development</p>
+                        <p class="content">  Process of creating websites and applications for the internet using programming languages, frameworks, and tools.</p>
+                    </div>
+                    <div class="card" data-aos="fade-up">
+                        <span class="icons"><i class="bi bi-wordpress"></i></span>
+                        <p class="title">Wordpress Development</p>
+                        <p class="content">Popular, user-friendly CMS powering millions of websites with customizable themes & plugins for versatile functionality.</p>
+                    </div>
+                    <div class="card" data-aos="fade-up">
+                        <span class="icons"><i class="bi bi-braces"></i></span>
+                        <p class="title">API Development</p>
+                        <p class="content">APIs are the foundation of modern software development, enabling applications to communicate with one another.</p>
+                    </div>
+                    <div class="card" data-aos="fade-up">
+                        <span class="icons"><i class="bi bi-database"></i></span>
+                        <p class="title">Database Design</p>
+                        <p class="content">The organization of data according to a database model and determines what data must be stored and how the data elements interrelate.</p>
+                    </div>
+                    <div class="card" data-aos="fade-up">
+                        <span class="icons"><i class="bi bi-pen-fill"></i></span>
+                        <p class="title">Content Writing</p>
+                        <p class="content">Creative process of producing written material for digital and print media, aimed at informing or engaging audiences.</p>
+                    </div>
+                    <div class="card" data-aos="fade-up">
+                        <span class="icons"><i class="bi bi-brush"></i></span>
+                        <p class="title">Graphic Design</p>
+                        <p class="content">Artistic process of visual communication through the use of typography, images, colors, and layout techniques.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h3 class="heading">Contact</h3>
+            <div class="contact-wrapper" data-aos="fade-up">
+                <div class="info">
+                    <div class="contact-info">
+                        <p><i class="bi bi-geo-alt"></i> Jhapa, Nepal</p>
+                        <p><i class="bi bi-telephone"></i> +977 9824XXXXXX</p>
+                        <p><i class="bi bi-envelope"></i> info@bhandari-santosh.com.np</p>
+                    </div>
+                    <div class="social-media">
+                        <a href="https://facebook.com/mesantoshvandari" target="_blank"><i class="bi bi-facebook"></i></a>
+                        <a href="https://twitter.com/santoshvandari" target="_blank"><i class="bi bi-twitter"></i></a>
+                        <a href="https://github.com/santoshvandari" target="_blank"><i class="bi bi-github"></i></a>
+                        <a href="https://www.instagram.com/santosh.vandari" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/santoshvandari" target="_blank"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://www.reddit.com/user/santosh-vandari" target="_blank"><i class="bi bi-reddit"></i></a>
+                    </div>
+                </div>
+                <div class="form">
+                    <form action="success.html" method="post" data-netlify="true" autocomplete="off">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter Your Email">
+                        <label for="message">Message:</label>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Write Your Message...." required></textarea>
+                        <div class="btn-wrapper">
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Santosh Bhandari. All Rights Reserved.</p>
+    </footer>
     <div class="preloader">
         <div class="loader"></div>
-    </div> -->
-    <main>
-        <p>Under Construction</p>
-    </main>
+    </div>
 </body>
 </html>
