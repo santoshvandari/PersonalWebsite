@@ -13,6 +13,9 @@
     }
 }
 @media screen and (max-width: 700px){
+    .scroll{
+        bottom: 20px;
+    }
     .menu-option i{
         display: block;
     }
@@ -40,5 +43,8 @@
     }
     section#contact .contact-wrapper{
         gap: 100px;
+    }
+    .scroll{
+        bottom: 10px;
     }
 }
