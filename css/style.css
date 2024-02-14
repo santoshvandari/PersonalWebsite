@@ -31,6 +31,9 @@ header nav{
     justify-content: space-between;
     align-items: center;
 }
+div.logo{
+    opacity: 0;
+}
 nav div.logo h1 a{
     color: inherit;
     text-decoration: none;
