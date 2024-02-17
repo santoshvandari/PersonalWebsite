@@ -5,9 +5,7 @@
     const navEl=document.querySelector("nav ul");
     const preloaderEl=document.querySelector('div.preloader');
     const logoEl=document.querySelector("div.logo");
-    console.log(menuOptionEl)
     window.addEventListener("scroll",()=>{
-        console.log(this.scrollY);
         if(this.scrollY<560){
             headerEl.classList.remove("solidColor");
             logoEl.style.opacity=0;

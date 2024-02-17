@@ -137,6 +137,7 @@ section#home{
     bottom: 0px !important;
     border-radius: 40px;
     cursor: pointer;
+    transform: translateX(-50%);
 }
 .scroll-btn::before,
 .scroll-btn::after {
