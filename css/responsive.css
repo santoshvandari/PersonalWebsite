@@ -21,7 +21,8 @@
     }
     nav ul{
         position: absolute;
-        top:50px;
+        top:0px;
+        padding-top: 60px;
         left: -100px;
         width: 0;
         height: 100vh;

@@ -70,6 +70,9 @@ nav ul li:hover::after{
     font-size: 40px;
     cursor: pointer;
     display: none;
+    right: 10px;
+    position: absolute;
+    z-index: 999;
 }
 nav ul.show{
     left: 0px;
