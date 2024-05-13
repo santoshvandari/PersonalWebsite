@@ -8,13 +8,13 @@
     </url>
     <!-- CV files -->
     <url>
-        <loc>ttps://bhandari-santosh.com.np/files/cv.pdf</loc>
+        <loc>https://bhandari-santosh.com.np/files/cv.pdf</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <!-- Image -->
     <url>
-        <loc>ttps://bhandari-santosh.com.np/img/img.png</loc>
+        <loc>https://bhandari-santosh.com.np/img/img.png</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>    
