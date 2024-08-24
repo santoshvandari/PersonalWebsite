@@ -6,35 +6,40 @@
     const preloaderEl=document.querySelector('div.preloader');
     const logoEl=document.querySelector("div.logo");
     const typingEl=document.getElementById("typing");
-    // const hoverAnimationEl = document.getElementById("text-hover-effect");
-    // const allowedCharacters = ['X', '$', 'Y', '#', '?', '*', '0', '1', '+'];
-    // const text = "Santosh Bhandari";
-    // function getRandomCharacter() {
-    //     const randomIndex = Math.floor(Math.random() * allowedCharacters.length);
-    //     return allowedCharacters[randomIndex];
-    // }
+    const hoverAnimationEl = document.getElementById("text-hover-effect");
+    const allowedCharacters = ['X', '$', 'Y', '#', '?', '*', '0', '1', '+'];
+    const text = "Santosh Bhandari";
+
+    // Hover Animation
+    // Random Character Function
+    function getRandomCharacter() {
+        const randomIndex = Math.floor(Math.random() * allowedCharacters.length);
+        return allowedCharacters[randomIndex];
+    }
+    // Animate Text Function
+    function animateText() {
+        const randomizedText = text.split('').map(getRandomCharacter).join('');
     
-    // function animateText() {
-    //     const randomizedText = text.split('').map(getRandomCharacter).join('');
-    
-    //     for (let i = 0; i < text.length; i++) {
-    //         setTimeout(() => {
-    //             const nextIndex = i + 1;
-    //             hoverAnimationEl.innerHTML = `${text.substring(0, nextIndex)}${randomizedText.substring(nextIndex)}`;
-    //         }, i * 70);
-    //     }
-    // }
-    // document.addEventListener("DOMContentLoaded", () => {
-    //     setTimeout(() => {
-    //         animateText();
-    //     }, 200); // 2000 milliseconds = 2 seconds
-    // });
-    // hoverAnimationEl.addEventListener("mouseover", (e) => {
-    //     animateText();
-    // });
+        for (let i = 0; i < text.length; i++) {
+            setTimeout(() => {
+                const nextIndex = i + 1;
+                hoverAnimationEl.innerHTML = `${text.substring(0, nextIndex)}${randomizedText.substring(nextIndex)}`;
+            }, i * 70);
+        }
+    }
+    // Event Listener
+    document.addEventListener("DOMContentLoaded", () => {
+        setTimeout(() => {
+            animateText();
+        }, 200); // 2000 milliseconds = 2 seconds
+    });
+    // Add event listener to the element
+    hoverAnimationEl.addEventListener("mouseover", (e) => {
+        animateText();
+    });
     // typing effect
     var typed = new Typed('#typing', {
-        strings: ['Backend Developer', 'Android Developer', 'API Developer', 'Database Designer', 'SOC Analyst'],
+        strings: ['Backend Developer', 'API Developer', 'Database Designer', 'SOC Analyst'],
         typeSpeed: 50,
         backSpeed: 50,
         loop: true
