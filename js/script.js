@@ -10,6 +10,30 @@
     const allowedCharacters = ['X', '$', 'Y', '#', '?', '*', '0', '1', '+'];
     const text = "Santosh Bhandari";
 
+    // Cursor Movement Effect 
+    document.addEventListener("DOMContentLoaded", () => {
+        const homeSection = document.getElementById('home');
+    
+        homeSection.addEventListener('mousemove', (e) => {
+            // Create a new particle element
+            const particle = document.createElement('div');
+            particle.classList.add('cursor-particle');
+    
+            // Set the position of the particle
+            particle.style.left = `${e.pageX}px`;
+            particle.style.top = `${e.pageY}px`;
+    
+            // Add the particle to the home section
+            homeSection.appendChild(particle);
+    
+            // Remove the particle after the animation ends
+            setTimeout(() => {
+                particle.remove();
+            }, 1000);
+        });
+    });
+    
+
     // Hover Animation
     // Random Character Function
     function getRandomCharacter() {

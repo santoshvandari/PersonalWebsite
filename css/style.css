@@ -397,3 +397,22 @@ footer p{
         transform: rotate(360deg);
     }    
 }
+/* Example of a custom cursor effect */
+.cursor-particle {
+    position: absolute;
+    width: 50px; /* Increased size */
+    height: 50px; /* Increased size */
+    background-color: #25b79f; /* Updated color */
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 15px rgba(37, 183, 159, 0.5); /* Adjusted glow to match color */
+    animation: particle-fade 1s ease-out forwards;
+}
+
+/* Fade-out animation for the particles */
+@keyframes particle-fade {
+    to {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}
