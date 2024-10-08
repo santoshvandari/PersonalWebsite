@@ -63,7 +63,7 @@
     });
     // typing effect
     var typed = new Typed('#typing', {
-        strings: ['Backend Developer', 'API Developer', 'Database Designer', 'SOC Analyst'],
+        strings: ['Backend Developer', 'API Developer', 'Database Designer', 'App Developer'],
         typeSpeed: 50,
         backSpeed: 50,
         loop: true
