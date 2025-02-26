@@ -357,6 +357,11 @@ form button{
 form button:hover{
     background: #07374a;
 }
+.error-message{
+    color: red;
+    font-size: 18px;
+    margin-top: 10px;
+}
 /* Contact Section Ends Here  */
 /* Footer Section Starts Here  */
 footer{

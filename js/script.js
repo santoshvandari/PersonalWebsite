@@ -6,6 +6,11 @@
     const preloaderEl=document.querySelector('div.preloader');
     const logoEl=document.querySelector("div.logo");
     const typingEl=document.getElementById("typing");
+    const formEl=document.querySelector("div.form form");
+    const nameEl=document.getElementById("name");
+    const emailEl=document.getElementById("email");
+    const messageEl=document.getElementById("message");
+    const errorEl=document.querySelector("p.error-message");
     const hoverAnimationEl = document.getElementById("text-hover-effect");
     const allowedCharacters = ['X', '$', 'Y', '#', '?', '*', '0', '1', '+'];
     const text = "Santosh Bhandari";
@@ -89,6 +94,40 @@
             menuOptionEl.classList.add('bi-list');
         }
     });
+
+    // Form Validation
+    const isValidForm=(name,email,message,errorEl)=>{
+        const emailPattern=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if(name.length<5){
+            errorEl.textContent="Name must be at least 5 characters";
+            return false;
+        }else if(!emailPattern.test(email)){
+            errorEl.textContent="Email is not valid";
+            return false;
+        }else if(message.length<25){
+            errorEl.textContent="Message must be at least 25 characters";
+            return false;
+        }
+        return true;
+    }
+    
+    formEl.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (nameEl.value === '' || emailEl.value === '' || messageEl.value === '') {
+            errorEl.textContent = 'Please fill out all fields';
+        }
+        if (isValidForm(nameEl.value,emailEl.value,messageEl.value,errorEl)) {
+            errorEl.textContent = 'Your message has been sent';
+            nameEl.value = '';
+            emailEl.value = '';
+            messageEl.value = '';
+            formEl.submit();
+        }
+    });
+
+
+
+
     // Preloader Event Listener
     window.addEventListener("load",()=>{
         preloaderEl.style.display="none";
