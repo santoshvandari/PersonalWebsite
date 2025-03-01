@@ -95,39 +95,6 @@
         }
     });
 
-    // Form Validation
-    const isValidForm=(name,email,message,errorEl)=>{
-        const emailPattern=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if(name.length<5){
-            errorEl.textContent="Name must be at least 5 characters";
-            return false;
-        }else if(!emailPattern.test(email)){
-            errorEl.textContent="Email is not valid";
-            return false;
-        }else if(message.length<25){
-            errorEl.textContent="Message must be at least 25 characters";
-            return false;
-        }
-        return true;
-    }
-    
-    formEl.addEventListener('submit', (e) => {
-        e.preventDefault();
-        if (nameEl.value === '' || emailEl.value === '' || messageEl.value === '') {
-            errorEl.textContent = 'Please fill out all fields';
-        }
-        if (isValidForm(nameEl.value,emailEl.value,messageEl.value,errorEl)) {
-            errorEl.textContent = 'Your message has been sent';
-            errorEl.style.color = 'green';
-            formEl.submit();
-            nameEl.value = '';
-            emailEl.value = '';
-            messageEl.value = '';
-        }
-    });
-
-
-
 
     // Preloader Event Listener
     window.addEventListener("load",()=>{
