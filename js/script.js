@@ -118,10 +118,11 @@
         }
         if (isValidForm(nameEl.value,emailEl.value,messageEl.value,errorEl)) {
             errorEl.textContent = 'Your message has been sent';
+            errorEl.style.color = 'green';
+            formEl.submit();
             nameEl.value = '';
             emailEl.value = '';
             messageEl.value = '';
-            formEl.submit();
         }
     });
 
