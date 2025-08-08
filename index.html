@@ -4,142 +4,641 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Santosh Bhandari || Personal Website</title>
-    <meta name="description" content="Personal Website of Santosh Bhandari">
-    <meta name="keywords" content="Santosh Bhandari, Santosh, Bhandari, Personal Website of Santosh Bhandari, Santosh Bhandari Personal Website">
+    <title>Santosh Bhandari - Backend Developer | Full-Stack Engineer</title>
+    <meta name="description" content="Santosh Bhandari - Expert Backend Developer specializing in Python, Django, FastAPI, and modern web technologies. Building scalable APIs and robust backend systems.">
+    <meta name="keywords" content="Backend Developer, API Developer, Python Developer, Django, FastAPI, Database Design, ETL, Santosh Bhandari">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#64ffda">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Santosh Portfolio">
+    <link rel="apple-touch-icon" href="img/favicon.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <!-- Syntax highlighting for code block -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
     <script defer src="js/script.js"></script>
 </head>
 <body>
+    <!-- Matrix Background -->
+    <div id="matrix-bg"></div>
+    
+    <!-- Cursor Trail -->
+    <div class="cursor-trail"></div>
+    
     <header>
         <nav>
             <div class="logo">
-                <h1><a href="#home">Santosh Bhandari</a></h1>
+                <h1><a href="#home" class="logo-text">
+                    <span class="bracket">&lt;</span>
+                    <span class="name">Santosh</span>
+                    <span class="bracket">/&gt;</span>
+                </a></h1>
             </div>
-            <ul class="">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="menu-option">
-                    <i class="bi bi-list" id="menu"></i>
+                <div class="hamburger" id="menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </nav>
     </header>
     <main>
-        <section id="home" >
+        <section id="home">
+            <div class="floating-icons">
+                <div class="floating-icon" data-tech="python"><i class="bi bi-code-slash"></i></div>
+                <div class="floating-icon" data-tech="database"><i class="bi bi-database"></i></div>
+                <div class="floating-icon" data-tech="api"><i class="bi bi-braces"></i></div>
+                <div class="floating-icon" data-tech="cloud"><i class="bi bi-cloud"></i></div>
+                <div class="floating-icon" data-tech="git"><i class="bi bi-git"></i></div>
+                <div class="floating-icon" data-tech="terminal"><i class="bi bi-terminal"></i></div>
+            </div>
             <div class="container">
-                <div class="image" data-aos="fade-up">
-                    <img src="img/img.png"  alt="Santosh Bhandari">
+                <div class="hero-content">
+                    <div class="profile-section" data-aos="fade-up" data-aos-delay="300">
+                        <div class="image-container">
+                            <div class="profile-ring"></div>
+                            <div class="image">
+                                <img src="img/img.png" alt="Santosh Bhandari">
+                            </div>
+                            <div class="status-indicator">
+                                <span class="status-dot"></span>
+                                <span class="status-text">Available for work</span>
+                            </div>
+                        </div>
+                        
+                        <div class="name-section">
+                            <h1 class="main-title">
+                                <span class="greeting">Hello, I'm</span>
+                                <span class="name-highlight" id="text-hover-effect">Santosh Bhandari</span>
+                            </h1>
+                            <div class="role-container">
+                                <span class="role-prefix">A passionate</span>
+                                <span class="role-text" id="typing"></span>
+                            </div>
+                            <p class="hero-description">
+                                Building robust full-stack applications with expertise in Python, JavaScript, and PHP. 
+                                Specialized in scalable backend architectures and modern frontend experiences.
+                            </p>
+                            
+                            <!-- <div class="cta-buttons">
+                                <a href="#contact" class="btn-primary">
+                                    <i class="bi bi-chat-dots"></i>
+                                    Let's Talk
+                                </a>
+                                <a href="files/cv.pdf" download class="btn-secondary">
+                                    <i class="bi bi-download"></i>
+                                    Download CV
+                                </a>
+                            </div> -->
+                        </div>
+                    </div>
                 </div>
-                <div class="name" data-aos="fade-up">
-                    <h3>I'm <span id="text-hover-effect">Santosh Bhandari</span></h3>
-                    <p><span id="typing"></span></p>
-                </div>
-                <div class="scroll">
+                
+                <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="800">
+                    <div class="scroll-text">Scroll to explore</div>
                     <div class="scroll-btn">
+                        <div class="scroll-arrow">
+                            <i class="bi bi-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="scroll-hint">Discover my journey</div>
+                </div>
+            </div>
+        </section>
+        <section id="about">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">
+                    <span class="section-number">01.</span>
+                    About Me
+                </h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="about-wrapper" data-aos="fade-up" data-aos-delay="200">
+                <div class="about-content">
+                    <div class="about-text">
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span class="file-name">developer.py</span>
+                                <div class="code-actions">
+                                    <i class="bi bi-files"></i>
+                                    <i class="bi bi-play-fill"></i>
+                                </div>
+                            </div>
+                            <div class="code-content">
+<pre><code class="language-python">class FullStackDeveloper:
+    def __init__(self):
+        self.name = "Santosh Bhandari"
+        self.role = "Full-stack Developer"
+        self.location = "Jhapa, Nepal"
+        self.languages = ["Python", "JavaScript", "PHP"]
+        self.frameworks = ["Django", "FastAPI", "Laravel"]
+        self.frontend = ["HTML5", "CSS3", "React.js"]
+        self.databases = ["PostgreSQL", "MongoDB", "Redis"]
+        self.tools = ["Git", "Docker", "Linux"]
+        self.specialty = "Backend-focused full-stack"
+        self.current_focus = "Building scalable web applications"
+
+    def get_bio(self):
+        return (
+            """
+            Passionate full-stack developer with strong backend expertise.
+            I love building scalable APIs, optimizing databases, and creating
+            responsive user interfaces. Always eager to learn and solve
+            challenging problems through clean, efficient code.
+            """
+        )
+
+    def get_skills(self):
+        return {
+            "backend": self.languages + self.frameworks,
+            "frontend": self.frontend,
+            "databases": self.databases,
+            "tools": self.tools,
+        }
+
+    def is_available_for_work(self):
+        return True  # Always ready for new opportunities!
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-stats">
+                        <div class="about-description">
+                            <h3>My Journey</h3>
+                            <p>Passionate about creating robust backend systems and elegant frontend interfaces. I specialize in building scalable APIs, optimizing databases, and crafting responsive user experiences. Always eager to learn new technologies and tackle challenging problems.</p>
+                            
+                            <div class="journey-highlights">
+                                <div class="highlight-item">
+                                    <div class="highlight-icon">
+                                        <i class="bi bi-code-slash"></i>
+                                    </div>
+                                    <div class="highlight-text">
+                                        <h4>Full-Stack Expertise</h4>
+                                        <p>Proficient in Python, JavaScript, and PHP with modern frameworks</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="highlight-item">
+                                    <div class="highlight-icon">
+                                        <i class="bi bi-database"></i>
+                                    </div>
+                                    <div class="highlight-text">
+                                        <h4>Database Optimization</h4>
+                                        <p>Expert in PostgreSQL, MongoDB, and Redis performance tuning</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="highlight-item">
+                                    <div class="highlight-icon">
+                                        <i class="bi bi-lightning"></i>
+                                    </div>
+                                    <div class="highlight-text">
+                                        <h4>API Development</h4>
+                                        <p>Building high-performance RESTful and GraphQL APIs</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Download CV block -->
+                            <div class="download-cv" data-aos="fade-up" data-aos-delay="150">
+                                <div class="cv-text">Prefer a quick overview?</div>
+                                <div class="cv-actions">
+                                    <a href="files/cv.pdf" target="_blank" class="btn-secondary">
+                                        <i class="bi bi-file-earmark-text"></i>
+                                        View CV
+                                    </a>
+                                    <a href="files/cv.pdf" download class="btn-primary">
+                                        <i class="bi bi-download"></i>
+                                        Download CV
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="about" >
-            <h3 class="heading">About</h3>
-            <div class="about-wrapper" data-aos="fade-up">
-                <div class="para">
-                    <p>Hello!! I am Santosh Bhandari, A Web Developer with a passion for learning different tech. With Learning a years about a different technology, I have Gain skills in Web Development using the Tech Stack of Django/Flask/FastAPI. I am constantly seeking new challenges and opportunities to grow and learn in my field.</p>
+        <section id="skills">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">
+                    <span class="section-number">02.</span>
+                    Technical Skills
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="skills-wrapper">
+                <div class="skills-categories">
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                        <div class="category-header">
+                            <i class="bi bi-code-slash"></i>
+                            <h3>Programming Languages</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">Python</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">JavaScript</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">PHP</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                        <div class="category-header">
+                            <i class="bi bi-stack"></i>
+                            <h3>Frameworks & Tools</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">Django</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">FastAPI</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Laravel</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                        <div class="category-header">
+                            <i class="bi bi-database"></i>
+                            <h3>Databases</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">PostgreSQL</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">MongoDB</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Redis</span>
+</div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+                        <div class="category-header">
+                            <i class="bi bi-layout-text-window-reverse"></i>
+                            <h3>Frontend Technologies</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">HTML5</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">CSS3</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">React.js</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <button><a href="files/cv.pdf" download="">Download CV</a></button>
             </div>
         </section>
+        
         <section id="services">
-            <h3 class="heading">Services</h3>
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">
+                    <span class="section-number">03.</span>
+                    Services
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            
             <div class="services-wrapper">
-                <div class="cards">
-                    <div class="card" data-aos="fade-up">
-                        <span class="icons"><i class="bi bi-code"></i></span>
-                        <p class="title">Web Development</p>
-                        <p class="content">Process of creating websites and applications for the internet using programming languages, frameworks, and tools.</p>
+                <div class="services-grid">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="service-icon">
+                                    <i class="bi bi-code"></i>
+                                </div>
+                                <h3 class="service-title">API Development</h3>
+                                <p class="service-preview">RESTful & GraphQL APIs</p>
+                                <div class="card-overlay">
+                                    <span>Learn More</span>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3>API Development</h3>
+                                <p>Building robust, scalable APIs using modern frameworks like FastAPI, Django REST, and GraphQL. Focus on performance, security, and documentation.</p>
+                                <ul>
+                                    <li>RESTful API Design</li>
+                                    <li>GraphQL Implementation</li>
+                                    <li>API Documentation</li>
+                                    <li>Rate Limiting & Security</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card" data-aos="fade-up">
-                        <span class="icons"><i class="bi bi-wordpress"></i></span>
-                        <p class="title">Wordpress Development</p>
-                        <p class="content">Popular, user-friendly CMS powering millions of websites with customizable themes & plugins for versatile functionality.</p>
+                    
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="service-icon">
+                                    <i class="bi bi-database"></i>
+                                </div>
+                                <h3 class="service-title">Database Design</h3>
+                                <p class="service-preview">Optimized Data Architecture</p>
+                                <div class="card-overlay">
+                                    <span>Learn More</span>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3>Database Design</h3>
+                                <p>Designing efficient database schemas and optimizing queries for maximum performance. Experience with both SQL and NoSQL databases.</p>
+                                <ul>
+                                    <li>Schema Design</li>
+                                    <li>Query Optimization</li>
+                                    <li>Database Migration</li>
+                                    <li>Performance Tuning</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card" data-aos="fade-up">
-                        <span class="icons"><i class="bi bi-braces"></i></span>
-                        <p class="title">API Development</p>
-                        <p class="content">APIs are the foundation of modern software development, enabling applications to communicate with one another.</p>
+                    
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="service-icon">
+                                    <i class="bi bi-layers"></i>
+                                </div>
+                                <h3 class="service-title">Full-stack Development</h3>
+                                <p class="service-preview">End-to-End Web Solutions</p>
+                                <div class="card-overlay">
+                                    <span>Learn More</span>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3>Full-stack Development</h3>
+                                <p>Building complete web applications from frontend to backend, with expertise in modern technologies and best practices.</p>
+                                <ul>
+                                    <li>React.js Applications</li>
+                                    <li>Responsive UI/UX</li>
+                                    <li>API Integration</li>
+                                    <li>Full-stack Architecture</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card" data-aos="fade-up">
-                        <span class="icons"><i class="bi bi-database"></i></span>
-                        <p class="title">Database Design</p>
-                        <p class="content">Organization of data according to a database model and determines what data must be stored and how the data elements interrelate.</p>
+                    
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="service-icon">
+                                    <i class="bi bi-gear"></i>
+                                </div>
+                                <h3 class="service-title">System Integration</h3>
+                                <p class="service-preview">Seamless Connectivity</p>
+                                <div class="card-overlay">
+                                    <span>Learn More</span>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3>System Integration</h3>
+                                <p>Connecting different systems and services to work together seamlessly. ETL processes, data synchronization, and third-party integrations.</p>
+                                <ul>
+                                    <li>Third-party API Integration</li>
+                                    <li>ETL Development</li>
+                                    <li>Data Synchronization</li>
+                                    <li>Legacy System Migration</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <!-- <div class="card" data-aos="fade-up">
-                        <span class="icons"><i class="bi bi-pen-fill"></i></span>
-                        <p class="title">Content Writing</p>
-                        <p class="content">Creative process of producing written material for digital and print media, aimed at informing or engaging audiences.</p>
-                    </div> -->
-                    <div class="card" data-aos="fade-up">
-                        <span class="icons"><i class="bi bi-database-gear"></i></span>
-                        <p class="title">ETL Development</p>
-                        <p class="content">Process of extracting data from various sources, transforming it for business needs, and loading it into target systems for future use.</p>
+                    
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="service-icon">
+                                    <i class="bi bi-phone"></i>
+                                </div>
+                                <h3 class="service-title">Mobile Backend</h3>
+                                <p class="service-preview">App Backend Services</p>
+                                <div class="card-overlay">
+                                    <span>Learn More</span>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3>Mobile Backend</h3>
+                                <p>Building robust backend services for mobile applications with real-time features, push notifications, and offline synchronization.</p>
+                                <ul>
+                                    <li>Real-time Communications</li>
+                                    <li>Push Notifications</li>
+                                    <li>Offline Data Sync</li>
+                                    <li>Mobile API Optimization</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card" data-aos="fade-up">
-                        <span class="icons"><i class="bi bi-google-play"></i></span>
-                        <p class="title">App Development</p>
-                        <p class="content">Process of creating Android Applications for the Android Devices by using available frameworks, and tools.</p>
+                    
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="service-icon">
+                                    <i class="bi bi-shield-check"></i>
+                                </div>
+                                <h3 class="service-title">Security & Performance</h3>
+                                <p class="service-preview">Secure & Fast Systems</p>
+                                <div class="card-overlay">
+                                    <span>Learn More</span>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3>Security & Performance</h3>
+                                <p>Implementing security best practices and optimizing system performance for high-traffic applications.</p>
+                                <ul>
+                                    <li>Security Audits</li>
+                                    <li>Performance Optimization</li>
+                                    <li>Load Testing</li>
+                                    <li>Security Implementation</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <section id="contact">
-            <h3 class="heading">Contact</h3>
-            <div class="contact-wrapper" data-aos="fade-up">
-                <div class="info">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">
+                    <span class="section-number">04.</span>
+                    Get In Touch
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="contact-wrapper" data-aos="fade-up" data-aos-delay="200">
+                <div class="contact-content">
                     <div class="contact-info">
-                        <p><i class="bi bi-geo-alt"></i> Jhapa, Nepal</p>
-                        <p><i class="bi bi-telephone"></i> +977 9824XXXXXX</p>
-                        <p><i class="bi bi-envelope"></i> info@bhandari-santosh.com.np</p>
-                    </div>
-                    <div class="social-media">
-<!--                         <a href="https://facebook.com/santoshvandari.me" target="_blank"><i class="bi bi-facebook"></i></a> -->
-                        <a href="https://twitter.com/santoshvandari" target="_blank"><i class="bi bi-twitter"></i></a>
-                        <a href="https://github.com/santoshvandari" target="_blank"><i class="bi bi-github"></i></a>
-                        <a href="https://www.instagram.com/santosh.vandari" target="_blank"><i class="bi bi-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/santoshvandari" target="_blank"><i class="bi bi-linkedin"></i></a>
-<!--                         <a href="https://www.reddit.com/user/santosh-vandari" target="_blank"><i class="bi bi-reddit"></i></a> -->
-                    </div>
-                </div>
-                <div class="form">
-                    <form action="success.html" method="post" data-netlify="true" autocomplete="off" data-netlify-recaptcha="true">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" placeholder="Enter Your Email">
-                        <label for="message">Message:</label>
-                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Write Your Message...." required></textarea>
-                        <div data-netlify-recaptcha="true"></div>
-                        <div class="btn-wrapper">
-                            <button type="submit">Submit</button>
+                        <div class="info-card" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="info-header">
+                                <h3>Let's Build Something Amazing</h3>
+                                <p>Ready to bring your backend vision to life? Let's discuss your project and create scalable solutions together.</p>
+                            </div>
+                            
+                            <div class="contact-details">
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="bi bi-geo-alt"></i>
+                                    </div>
+                                    <div class="contact-text">
+                                        <h4>Location</h4>
+                                        <p>Jhapa, Nepal</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="bi bi-envelope"></i>
+                                    </div>
+                                    <div class="contact-text">
+                                        <h4>Email</h4>
+                                        <p>info@bhandari-santosh.com.np</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="bi bi-clock"></i>
+                                    </div>
+                                    <div class="contact-text">
+                                        <h4>Response Time</h4>
+                                        <p>Within 24 hours</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="social-links">
+                                <a href="https://twitter.com/santoshvandari" target="_blank" class="social-link twitter">
+                                    <i class="bi bi-twitter"></i>
+                                    <span>Twitter</span>
+                                </a>
+                                <a href="https://github.com/santoshvandari" target="_blank" class="social-link github">
+                                    <i class="bi bi-github"></i>
+                                    <span>GitHub</span>
+                                </a>
+                                <a href="https://www.linkedin.com/in/santoshvandari" target="_blank" class="social-link linkedin">
+                                    <i class="bi bi-linkedin"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                                <a href="https://www.instagram.com/santosh.vandari" target="_blank" class="social-link instagram">
+                                    <i class="bi bi-instagram"></i>
+                                    <span>Instagram</span>
+                                </a>
+                            </div>
                         </div>
-                    </form>
+                    </div>
+                    
+                    <div class="contact-form-container">
+                        <div class="form-card" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="form-header">
+                                <h3>Send Message</h3>
+                                <p>Have a project in mind? Let's discuss it!</p>
+                            </div>
+                            
+                            <form action="success.html" method="post" data-netlify="true" autocomplete="off" data-netlify-recaptcha="true" class="contact-form">
+                                <div class="form-group">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                                    <div class="input-highlight"></div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                                    <div class="input-highlight"></div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="subject">Subject</label>
+                                    <input type="text" id="subject" name="subject" placeholder="Project Discussion" required>
+                                    <div class="input-highlight"></div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea name="message" id="message" placeholder="Tell me about your project requirements..." required></textarea>
+                                    <div class="input-highlight"></div>
+                                </div>
+                                
+                                <div data-netlify-recaptcha="true"></div>
+                                
+                                <button type="submit" class="submit-btn">
+                                    <span class="btn-text">Send Message</span>
+                                    <span class="btn-icon"><i class="bi bi-send"></i></span>
+                                    <div class="btn-ripple"></div>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
     <footer>
-        <p>&copy; Santosh Bhandari. All Rights Reserved.</p>
+        <div class="footer-content">
+            <div class="footer-text">
+                <p>&copy; 2025 Santosh Bhandari. All Rights Reserved.</p>
+            </div>
+           
+        </div>
     </footer>
+    
     <div class="preloader">
-        <div class="loader"></div>
+        <div class="loader-container">
+            <div class="terminal-loader">
+                <div class="terminal-header">
+                    <div class="terminal-controls">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="terminal-body">
+                    <div class="loading-text">
+                        <span class="prompt">$</span>
+                        <span class="command">npm run dev</span>
+                    </div>
+                    <div class="loading-dots">
+                        <span>Loading</span>
+                        <span class="dot">.</span>
+                        <span class="dot">.</span>
+                        <span class="dot">.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

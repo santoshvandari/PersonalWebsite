@@ -1,51 +1,568 @@
-@media screen and (max-width: 1100px){
-    header nav{
-        width: 100%;
+/* Responsive Design */
+
+/* Large Desktop */
+@media screen and (max-width: 1400px) {
+    .hero-content {
+        gap: 40px;
     }
-    .about-wrapper .para{
-        width: 80%;
+    
+    .main-title {
+        font-size: 3.5rem;
     }
-    .services-wrapper{
-        width: 90%;
-    }
-    section#contact .contact-wrapper{
-        gap: 100px;
+    
+    .section-title {
+        font-size: 2.5rem;
     }
 }
-@media screen and (max-width: 700px){
-    .scroll{
-        bottom: 20px;
+
+/* Desktop */
+@media screen and (max-width: 1200px) {
+    :root {
+        --container-max-width: 1000px;
     }
-    .menu-option i{
-        display: block;
+    
+    header nav {
+        width: 95%;
     }
-    nav ul{
-        position: absolute;
-        top:0px;
-        padding-top: 60px;
-        left: -100px;
-        width: 0;
+    
+    .hero-content {
+        gap: 30px;
+    }
+    
+    .main-title {
+        font-size: 3rem;
+    }
+    
+    .role-container {
+        font-size: 1.8rem;
+    }
+    
+    .about-content {
+        gap: 30px;
+    }
+    
+    .about-terminal {
+        order: 2;
+    }
+    
+    .about-text {
+        order: 1;
+    }
+    
+    .about-stats {
+        order: 3;
+        grid-column: 1;
+        margin-top: 20px;
+    }
+    
+    .journey-highlights {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .about-description {
+        text-align: center;
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+    }
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+    :root {
+        --section-padding: 80px 0;
+    }
+    
+    /* Navigation */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
         height: 100vh;
-        background: #07374aab;
+        background: rgba(10, 14, 39, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        transition: var(--transition-smooth);
+        z-index: 999;
+    }
+    
+    .nav-links.show {
+        right: 0;
+    }
+    
+    .nav-link {
+        font-size: 18px;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: var(--transition-smooth);
+    }
+    
+    .nav-links.show .nav-link {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .nav-links.show .nav-link:nth-child(1) { transition-delay: 0.1s; }
+    .nav-links.show .nav-link:nth-child(2) { transition-delay: 0.2s; }
+    .nav-links.show .nav-link:nth-child(3) { transition-delay: 0.3s; }
+    .nav-links.show .nav-link:nth-child(4) { transition-delay: 0.4s; }
+    .nav-links.show .nav-link:nth-child(5) { transition-delay: 0.5s; }
+    
+    .hamburger {
+        display: flex;
+        z-index: 1001;
+    }
+    
+    /* Home Section */
+    #home {
+        padding: 120px 0 80px;
+        min-height: auto;
+    }
+    
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .role-container {
+        font-size: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .role-text {
+        min-width: auto;
+    }
+    
+    .hero-description {
+        font-size: 16px;
+    }
+    
+    .cta-buttons {
+        justify-content: center;
+    }
+    
+    .image {
+        width: 200px;
+        height: 200px;
+    }
+    
+    /* About Section */
+    .code-content {
+        font-size: 12px;
+        padding: 15px;
+    }
+    
+    .terminal-window.enhanced {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .terminal-body {
+        padding: 15px;
+        font-size: 12px;
+    }
+    
+    .highlight-item {
+        padding: 15px;
+        gap: 12px;
+    }
+    
+    .highlight-icon {
+        font-size: 20px;
+        min-width: 35px;
+    }
+    
+    .journey-highlights {
+        margin-top: 20px;
+    }
+    
+    .about-description h3 {
+        font-size: 24px;
+    }
+    
+    /* Skills Section */
+    .skills-categories {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .skill-category {
+        padding: 25px;
+    }
+    
+    /* Services */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-card {
+        height: 350px;
+    }
+    
+    /* Section Headers */
+    .section-title {
+        font-size: 2rem;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .section-number {
+        font-size: 1.5rem;
+    }
+    
+    /* Footer */
+    .footer-content {
         flex-direction: column;
         text-align: center;
-        transition: all 0.5s;
+    }
+    
+    .footer-links {
+        justify-content: center;
     }
 }
-@media screen and (max-width: 400px){
-    header nav{
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+    :root {
+        --section-padding: 60px 0;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    /* Navigation */
+    header nav {
+        padding: 0 15px;
+        height: 70px;
+    }
+    
+    .logo-text {
+        font-size: 20px;
+    }
+    
+    /* Home Section */
+    #home {
+        padding: 100px 0 60px;
+    }
+    
+    .main-title {
+        font-size: 2rem;
+        white-space: normal;
+        line-height: 1.2;
+    }
+    
+    .role-container {
+        font-size: 1.2rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    .role-text {
+        min-width: auto;
+        text-align: center;
+    }
+    
+    .hero-description {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .btn-primary, .btn-secondary {
         width: 100%;
+        justify-content: center;
+        padding: 14px 24px;
     }
-    .about-wrapper .para{
-        width: 100%;
+    
+    .image {
+        width: 150px;
+        height: 150px;
     }
-    .services-wrapper{
-        width: 90%;
+    
+    .terminal-window {
+        font-size: 12px;
     }
-    section#contact .contact-wrapper{
-        gap: 100px;
+    
+    .terminal-body {
+        padding: 15px;
     }
-    .scroll{
-        bottom: 10px;
+    
+    /* Section Headers */
+    .section-header {
+        margin-bottom: 50px;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .section-number {
+        font-size: 1.2rem;
+    }
+    
+    /* About Section */
+    .code-content {
+        font-size: 11px;
+        padding: 12px;
+    }
+    
+    .terminal-window.enhanced {
+        margin: 20px 0;
+    }
+    
+    .terminal-body {
+        padding: 12px;
+        font-size: 11px;
+    }
+    
+    .terminal-output {
+        margin-bottom: 12px;
+        margin-left: 12px;
+    }
+    
+    .highlight-item {
+        padding: 12px;
+        gap: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .highlight-icon {
+        align-self: center;
+        margin-top: 0;
+    }
+    
+    .about-description h3 {
+        font-size: 20px;
+    }
+    
+    .scroll-indicator {
+        bottom: 20px;
+    }
+    
+    .scroll-text {
+        font-size: 11px;
+    }
+    
+    .scroll-hint {
+        font-size: 9px;
+    }
+    
+    /* Skills Section */
+    .skill-category {
+        padding: 20px;
+    }
+    
+    .category-header h3 {
+        font-size: 1.2rem;
+    }
+    
+    /* Services */
+    .service-card {
+        height: 300px;
+    }
+    
+    .card-front, .card-back {
+        padding: 20px;
+    }
+    
+    .service-icon {
+        font-size: 3rem;
+    }
+    
+    .service-title {
+        font-size: 1.2rem;
+    }
+    
+    /* Contact */
+    .info-card, .form-card {
+        padding: 25px;
+    }
+    
+    .info-header h3, .form-header h3 {
+        font-size: 1.5rem;
+    }
+    
+    .social-links {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 12px;
+    }
+    
+    .submit-btn {
+        padding: 14px;
+    }
+    
+    /* Contact Items */
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .contact-icon {
+        margin: 0 auto;
+    }
+    
+    /* Footer */
+    .footer-content {
+        padding: 0 15px;
+    }
+    
+    .footer-links {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    
+    /* Preloader */
+    .terminal-loader {
+        width: 250px;
+    }
+    
+    .terminal-loader .terminal-body {
+        padding: 15px;
+    }
+}
+
+/* Extra Small Mobile */
+@media screen and (max-width: 360px) {
+    .main-title {
+        font-size: 1.8rem;
+    }
+    
+    .role-container {
+        font-size: 1rem;
+        white-space: normal;
+    }
+    
+    .role-text {
+        min-width: auto;
+    }
+    
+    .hero-description {
+        font-size: 13px;
+    }
+    
+    .image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
+    }
+    
+    .service-card {
+        height: 280px;
+    }
+    
+    .info-card, .form-card {
+        padding: 20px;
+    }
+    
+    .terminal-loader {
+        width: 220px;
+    }
+}
+
+/* Landscape Mobile */
+@media screen and (max-height: 480px) and (orientation: landscape) {
+    #home {
+        min-height: auto;
+        padding: 80px 0 40px;
+    }
+    
+    .hero-content {
+        gap: 30px;
+    }
+    
+    .image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .scroll-indicator {
+        display: none;
+    }
+}
+
+/* High DPI Displays */
+@media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .image img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .scroll-arrow {
+        animation: none;
+    }
+    
+    .floating-icon {
+        animation: none;
+    }
+    
+    .cursor-blink {
+        animation: none;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .floating-icons,
+    .cursor-trail,
+    .preloader,
+    .scroll-indicator,
+    .hamburger {
+        display: none !important;
+    }
+    
+    header {
+        position: static;
+        background: white !important;
+        color: black !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    section {
+        page-break-inside: avoid;
     }
 }
