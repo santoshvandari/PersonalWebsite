@@ -45,7 +45,26 @@
     
     .about-content {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 30px;
+    }
+    
+    .about-terminal {
+        order: 2;
+    }
+    
+    .about-text {
+        order: 1;
+    }
+    
+    .about-stats {
+        order: 3;
+        grid-column: 1;
+        margin-top: 20px;
+    }
+    
+    .journey-highlights {
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
     
     .about-description {
@@ -150,6 +169,34 @@
     .code-content {
         font-size: 12px;
         padding: 15px;
+    }
+    
+    .terminal-window.enhanced {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .terminal-body {
+        padding: 15px;
+        font-size: 12px;
+    }
+    
+    .highlight-item {
+        padding: 15px;
+        gap: 12px;
+    }
+    
+    .highlight-icon {
+        font-size: 20px;
+        min-width: 35px;
+    }
+    
+    .journey-highlights {
+        margin-top: 20px;
+    }
+    
+    .about-description h3 {
+        font-size: 24px;
     }
     
     /* Skills Section */
@@ -281,6 +328,48 @@
     .code-content {
         font-size: 11px;
         padding: 12px;
+    }
+    
+    .terminal-window.enhanced {
+        margin: 20px 0;
+    }
+    
+    .terminal-body {
+        padding: 12px;
+        font-size: 11px;
+    }
+    
+    .terminal-output {
+        margin-bottom: 12px;
+        margin-left: 12px;
+    }
+    
+    .highlight-item {
+        padding: 12px;
+        gap: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .highlight-icon {
+        align-self: center;
+        margin-top: 0;
+    }
+    
+    .about-description h3 {
+        font-size: 20px;
+    }
+    
+    .scroll-indicator {
+        bottom: 20px;
+    }
+    
+    .scroll-text {
+        font-size: 11px;
+    }
+    
+    .scroll-hint {
+        font-size: 9px;
     }
     
     /* Skills Section */

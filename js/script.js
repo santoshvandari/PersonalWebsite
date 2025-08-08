@@ -45,7 +45,6 @@
         initializeAOS();
         initializeParallax();
         initializeSmoothScrolling();
-        initializeSmoothScrolling();
     }
 
     // Preloader with enhanced loading animation
@@ -160,14 +159,14 @@
 
     // Enhanced Typing Animations
     function initializeTypingAnimations() {
-        // Main typing animation
+        // Main typing animation with fixed cursor
         if (elements.typingElement) {
             const typed = new Typed('#typing', {
                 strings: [
                     'Full-stack Developer',
                     'Python Developer',
                     'JavaScript Developer', 
-                    'PHP Developer',
+                    'ETL Developer',
                     'Backend Specialist',
                     'API Architect'
                 ],
@@ -177,31 +176,38 @@
                 loop: true,
                 smartBackspace: true,
                 showCursor: true,
-                cursorChar: '|'
             });
         }
 
-        // Terminal typing effect
+        // Enhanced Terminal typing effect
         if (elements.terminalTyping) {
-            const terminalText = "Full-stack developer with strong backend expertise. Specializing in Python, JavaScript, and PHP development, building scalable APIs and modern web applications.";
-            typeWriter(elements.terminalTyping, terminalText, 50);
+            const terminalText = "Started as a curious learner, evolved into a passionate developer. Building solutions that make a difference, one line of code at a time.";
+            typeWriterEnhanced(elements.terminalTyping, terminalText, 50);
         }
     }
 
-    // Typewriter effect for terminal
-    function typeWriter(element, text, speed) {
+    // Enhanced Typewriter effect for terminal with cursor
+    function typeWriterEnhanced(element, text, speed) {
         let i = 0;
         element.textContent = '';
+        element.style.borderRight = '2px solid #64ffda';
+        element.style.paddingRight = '5px';
         
         function type() {
             if (i < text.length) {
                 element.textContent += text.charAt(i);
                 i++;
                 setTimeout(type, speed);
+            } else {
+                // Blinking cursor effect after typing is complete
+                setTimeout(() => {
+                    element.style.borderRight = element.style.borderRight === 'none' ? '2px solid #64ffda' : 'none';
+                    setTimeout(() => typeWriterEnhanced(element, text, speed), 3000); // Restart after 3 seconds
+                }, 500);
             }
         }
         
-        setTimeout(type, 2000); // Start after 2 seconds
+        type();
     }
 
     // Enhanced Hover Effects
@@ -411,6 +417,23 @@
                 }
             });
         });
+        
+        // Scroll indicator click functionality
+        const scrollIndicator = document.querySelector('.scroll-indicator');
+        if (scrollIndicator) {
+            scrollIndicator.addEventListener('click', () => {
+                const aboutSection = document.querySelector('#about');
+                if (aboutSection) {
+                    const headerHeight = elements.header.offsetHeight;
+                    const targetPosition = aboutSection.offsetTop - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        }
     }
 
     // Performance optimizations

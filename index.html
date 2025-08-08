@@ -70,30 +70,7 @@
             </div>
             <div class="container">
                 <div class="hero-content">
-                    <div class="terminal-window" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="terminal-header">
-                            <div class="terminal-buttons">
-                                <span class="btn close"></span>
-                                <span class="btn minimize"></span>
-                                <span class="btn maximize"></span>
-                            </div>
-                            <div class="terminal-title">~/santosh-bhandari</div>
-                        </div>
-                        <div class="terminal-body">
-                            <div class="terminal-line">
-                                <span class="prompt">$</span>
-                                <span class="command">whoami</span>
-                            </div>
-                            <div class="terminal-output">fullstack_developer</div>
-                            <div class="terminal-line">
-                                <span class="prompt">$</span>
-                                <span class="command">cat about.txt</span>
-                            </div>
-                            <div class="terminal-output typing-text" id="terminal-typing"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="profile-section" data-aos="fade-up" data-aos-delay="500">
+                    <div class="profile-section" data-aos="fade-up" data-aos-delay="300">
                         <div class="image-container">
                             <div class="profile-ring"></div>
                             <div class="image">
@@ -115,8 +92,8 @@
                                 <span class="role-text" id="typing"></span>
                             </div>
                             <p class="hero-description">
-                                Crafting robust backend architectures and scalable APIs that power modern applications. 
-                                Specialized in Python ecosystems and database optimization.
+                                Building robust full-stack applications with expertise in Python, JavaScript, and PHP. 
+                                Specialized in scalable backend architectures and modern frontend experiences.
                             </p>
                             
                             <div class="cta-buttons">
@@ -133,11 +110,14 @@
                     </div>
                 </div>
                 
-                <div class="scroll-indicator">
+                <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="800">
                     <div class="scroll-text">Scroll to explore</div>
                     <div class="scroll-btn">
-                        <div class="scroll-arrow"></div>
+                        <div class="scroll-arrow">
+                            <i class="bi bi-chevron-down"></i>
+                        </div>
                     </div>
+                    <div class="scroll-hint">Discover my journey</div>
                 </div>
             </div>
         </section>
@@ -183,6 +163,81 @@
                         </div>
                     </div>
                     
+                    <div class="about-terminal">
+                        <div class="terminal-window enhanced" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="terminal-header">
+                                <div class="terminal-buttons">
+                                    <span class="btn close"></span>
+                                    <span class="btn minimize"></span>
+                                    <span class="btn maximize"></span>
+                                </div>
+                                <div class="terminal-title">~/santosh-profile</div>
+                            </div>
+                            <div class="terminal-body">
+                                <div class="terminal-line">
+                                    <span class="prompt">$</span>
+                                    <span class="command">whoami</span>
+                                </div>
+                                <div class="terminal-output">fullstack_developer</div>
+                                <div class="terminal-line">
+                                    <span class="prompt">$</span>
+                                    <span class="command">cat journey.txt</span>
+                                </div>
+                                <div class="terminal-output typing-text" id="terminal-typing"></div>
+                                <div class="terminal-line">
+                                    <span class="prompt">$</span>
+                                    <span class="command">ls skills/</span>
+                                </div>
+                                <div class="terminal-output">
+                                    <span class="file-type python">python/</span> 
+                                    <span class="file-type js">javascript/</span> 
+                                    <span class="file-type php">php/</span><br>
+                                    <span class="file-type framework">frameworks/</span> 
+                                    <span class="file-type db">databases/</span>
+                                </div>
+                                <div class="terminal-cursor">█</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-stats">
+                        <div class="about-description">
+                            <h3>My Journey</h3>
+                            <p>Passionate about creating robust backend systems and elegant frontend interfaces. I specialize in building scalable APIs, optimizing databases, and crafting responsive user experiences. Always eager to learn new technologies and tackle challenging problems.</p>
+                            
+                            <div class="journey-highlights">
+                                <div class="highlight-item">
+                                    <div class="highlight-icon">
+                                        <i class="bi bi-code-slash"></i>
+                                    </div>
+                                    <div class="highlight-text">
+                                        <h4>Full-Stack Expertise</h4>
+                                        <p>Proficient in Python, JavaScript, and PHP with modern frameworks</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="highlight-item">
+                                    <div class="highlight-icon">
+                                        <i class="bi bi-database"></i>
+                                    </div>
+                                    <div class="highlight-text">
+                                        <h4>Database Optimization</h4>
+                                        <p>Expert in PostgreSQL, MongoDB, and Redis performance tuning</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="highlight-item">
+                                    <div class="highlight-icon">
+                                        <i class="bi bi-lightning"></i>
+                                    </div>
+                                    <div class="highlight-text">
+                                        <h4>API Development</h4>
+                                        <p>Building high-performance RESTful and GraphQL APIs</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -556,14 +611,9 @@
         <div class="footer-content">
             <div class="footer-text">
                 <p>&copy; 2025 Santosh Bhandari. All Rights Reserved.</p>
-                <p class="footer-subtitle">Crafted with ❤️ and lots of ☕</p>
             </div>
-            <div class="footer-links">
-                <a href="qr-privacy-policy.html">Privacy Policy</a>
-                <a href="sitemap.xml">Sitemap</a>
-            </div>
+           
         </div>
-        <div class="footer-pattern"></div>
     </footer>
     
     <div class="preloader">
