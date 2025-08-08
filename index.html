@@ -24,6 +24,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <!-- Syntax highlighting for code block -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
     <script defer src="js/script.js"></script>
 </head>
 <body>
@@ -96,7 +100,7 @@
                                 Specialized in scalable backend architectures and modern frontend experiences.
                             </p>
                             
-                            <div class="cta-buttons">
+                            <!-- <div class="cta-buttons">
                                 <a href="#contact" class="btn-primary">
                                     <i class="bi bi-chat-dots"></i>
                                     Let's Talk
@@ -105,7 +109,7 @@
                                     <i class="bi bi-download"></i>
                                     Download CV
                                 </a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -129,7 +133,7 @@
                 </h2>
                 <div class="section-line"></div>
             </div>
-            
+
             <div class="about-wrapper" data-aos="fade-up" data-aos-delay="200">
                 <div class="about-content">
                     <div class="about-text">
@@ -142,64 +146,44 @@
                                 </div>
                             </div>
                             <div class="code-content">
-                                <pre><code><span class="keyword">class</span> <span class="class-name">FullStackDeveloper</span>:
-    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="param">self</span>):
-        <span class="param">self</span>.name = <span class="string">"Santosh Bhandari"</span>
-        <span class="param">self</span>.role = <span class="string">"Full-stack Developer"</span>
-        <span class="param">self</span>.languages = [<span class="string">"Python"</span>, <span class="string">"JavaScript"</span>, <span class="string">"PHP"</span>]
-        <span class="param">self</span>.frameworks = [<span class="string">"Django"</span>, <span class="string">"FastAPI"</span>, <span class="string">"Laravel"</span>]
-        <span class="param">self</span>.frontend = [<span class="string">"HTML5"</span>, <span class="string">"CSS3"</span>, <span class="string">"React.js"</span>]
-        <span class="param">self</span>.databases = [<span class="string">"PostgreSQL"</span>, <span class="string">"MongoDB"</span>]
-        <span class="param">self</span>.specialty = <span class="string">"Backend-focused full-stack"</span>
-    
-    <span class="keyword">def</span> <span class="function">get_bio</span>(<span class="param">self</span>):
-        <span class="keyword">return</span> <span class="string">"""
-        Full-stack developer with strong backend expertise.
-        Passionate about building scalable APIs, optimizing 
-        databases, and creating responsive user interfaces.
-        Always learning and growing in the tech world.
-        """</span></code></pre>
+<pre><code class="language-python">class FullStackDeveloper:
+    def __init__(self):
+        self.name = "Santosh Bhandari"
+        self.role = "Full-stack Developer"
+        self.location = "Jhapa, Nepal"
+        self.languages = ["Python", "JavaScript", "PHP"]
+        self.frameworks = ["Django", "FastAPI", "Laravel"]
+        self.frontend = ["HTML5", "CSS3", "React.js"]
+        self.databases = ["PostgreSQL", "MongoDB", "Redis"]
+        self.tools = ["Git", "Docker", "Linux"]
+        self.specialty = "Backend-focused full-stack"
+        self.current_focus = "Building scalable web applications"
+
+    def get_bio(self):
+        return (
+            """
+            Passionate full-stack developer with strong backend expertise.
+            I love building scalable APIs, optimizing databases, and creating
+            responsive user interfaces. Always eager to learn and solve
+            challenging problems through clean, efficient code.
+            """
+        )
+
+    def get_skills(self):
+        return {
+            "backend": self.languages + self.frameworks,
+            "frontend": self.frontend,
+            "databases": self.databases,
+            "tools": self.tools,
+        }
+
+    def is_available_for_work(self):
+        return True  # Always ready for new opportunities!
+</code></pre>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="about-terminal">
-                        <div class="terminal-window enhanced" data-aos="zoom-in" data-aos-delay="400">
-                            <div class="terminal-header">
-                                <div class="terminal-buttons">
-                                    <span class="btn close"></span>
-                                    <span class="btn minimize"></span>
-                                    <span class="btn maximize"></span>
-                                </div>
-                                <div class="terminal-title">~/santosh-profile</div>
-                            </div>
-                            <div class="terminal-body">
-                                <div class="terminal-line">
-                                    <span class="prompt">$</span>
-                                    <span class="command">whoami</span>
-                                </div>
-                                <div class="terminal-output">fullstack_developer</div>
-                                <div class="terminal-line">
-                                    <span class="prompt">$</span>
-                                    <span class="command">cat journey.txt</span>
-                                </div>
-                                <div class="terminal-output typing-text" id="terminal-typing"></div>
-                                <div class="terminal-line">
-                                    <span class="prompt">$</span>
-                                    <span class="command">ls skills/</span>
-                                </div>
-                                <div class="terminal-output">
-                                    <span class="file-type python">python/</span> 
-                                    <span class="file-type js">javascript/</span> 
-                                    <span class="file-type php">php/</span><br>
-                                    <span class="file-type framework">frameworks/</span> 
-                                    <span class="file-type db">databases/</span>
-                                </div>
-                                <div class="terminal-cursor">█</div>
-                            </div>
-                        </div>
-                    </div>
-                    
+
                     <div class="about-stats">
                         <div class="about-description">
                             <h3>My Journey</h3>
@@ -234,6 +218,21 @@
                                         <h4>API Development</h4>
                                         <p>Building high-performance RESTful and GraphQL APIs</p>
                                     </div>
+                                </div>
+                            </div>
+
+                            <!-- Download CV block -->
+                            <div class="download-cv" data-aos="fade-up" data-aos-delay="150">
+                                <div class="cv-text">Prefer a quick overview?</div>
+                                <div class="cv-actions">
+                                    <a href="files/cv.pdf" target="_blank" class="btn-secondary">
+                                        <i class="bi bi-file-earmark-text"></i>
+                                        View CV
+                                    </a>
+                                    <a href="files/cv.pdf" download class="btn-primary">
+                                        <i class="bi bi-download"></i>
+                                        Download CV
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -302,7 +301,7 @@
                             </div>
                             <div class="skill-item">
                                 <span class="skill-name">Redis</span>
-                            </div>
+</div>
                         </div>
                     </div>
                     

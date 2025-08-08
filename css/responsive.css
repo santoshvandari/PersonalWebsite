@@ -26,25 +26,18 @@
     }
     
     .hero-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 50px;
+        gap: 30px;
     }
     
-    .terminal-window {
-        order: 2;
+    .main-title {
+        font-size: 3rem;
     }
     
-    .profile-section {
-        order: 1;
-    }
-    
-    .name-section {
-        text-align: center;
+    .role-container {
+        font-size: 1.8rem;
     }
     
     .about-content {
-        grid-template-columns: 1fr;
         gap: 30px;
     }
     
@@ -267,6 +260,8 @@
     
     .main-title {
         font-size: 2rem;
+        white-space: normal;
+        line-height: 1.2;
     }
     
     .role-container {
@@ -274,7 +269,6 @@
         flex-direction: column;
         align-items: center;
         gap: 5px;
-        white-space: normal;
     }
     
     .role-text {
@@ -284,6 +278,7 @@
     
     .hero-description {
         font-size: 14px;
+        padding: 0 10px;
     }
     
     .cta-buttons {

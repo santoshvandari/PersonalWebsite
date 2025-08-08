@@ -176,10 +176,11 @@
                 loop: true,
                 smartBackspace: true,
                 showCursor: true,
+                cursorChar: '|'
             });
         }
 
-        // Enhanced Terminal typing effect
+        // Enhanced Terminal typing effect (for About section)
         if (elements.terminalTyping) {
             const terminalText = "Started as a curious learner, evolved into a passionate developer. Building solutions that make a difference, one line of code at a time.";
             typeWriterEnhanced(elements.terminalTyping, terminalText, 50);
@@ -474,17 +475,6 @@
     }, 250));
 
     // Service worker registration for PWA capabilities
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/sw.js')
-                .then(registration => {
-                    console.log('SW registered: ', registration);
-                })
-                .catch(registrationError => {
-                    console.log('SW registration failed: ', registrationError);
-                });
-        });
-    }
 
     // Error handling
     window.addEventListener('error', (e) => {
