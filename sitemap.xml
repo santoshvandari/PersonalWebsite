@@ -1,21 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <!-- Home Page -->
     <url>
-        <loc>https://bhandari-santosh.com.np/sitemap.xml</loc>
+        <loc>https://bhandari-santosh.com.np/</loc>
+        <lastmod>2025-08-08</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://bhandari-santosh.com.np/img/img.png</image:loc>
+            <image:title>Santosh Bhandari - Backend Developer</image:title>
+            <image:caption>Professional photo of Santosh Bhandari, backend developer specializing in Python and modern web technologies</image:caption>
+        </image:image>
     </url>
-    <!-- CV files -->
+    
+    <!-- About Section -->
+    <url>
+        <loc>https://bhandari-santosh.com.np/#about</loc>
+        <lastmod>2025-08-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Services Section -->
+    <url>
+        <loc>https://bhandari-santosh.com.np/#services</loc>
+        <lastmod>2025-08-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Skills Section -->
+    <url>
+        <loc>https://bhandari-santosh.com.np/#skills</loc>
+        <lastmod>2025-08-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Contact Section -->
+    <url>
+        <loc>https://bhandari-santosh.com.np/#contact</loc>
+        <lastmod>2025-08-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- CV file -->
     <url>
         <loc>https://bhandari-santosh.com.np/files/cv.pdf</loc>
+        <lastmod>2025-08-08</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.7</priority>
     </url>
-    <!-- Image -->
+    
+    <!-- Success Page -->
     <url>
-        <loc>https://bhandari-santosh.com.np/img/img.png</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>    
+        <loc>https://bhandari-santosh.com.np/success.html</loc>
+        <lastmod>2025-08-08</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
 </urlset>

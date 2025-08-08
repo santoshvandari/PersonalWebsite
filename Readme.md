@@ -1,4 +1,4 @@
-# Santosh Bhandari - Backend Developer Portfolio 🚀
+# Santosh Bhandari - Backend Developer Portfolio
 
 A modern, responsive, and highly interactive portfolio website showcasing backend development expertise with stunning animations and cutting-edge web technologies.
 
@@ -121,7 +121,6 @@ PersonalWebsite/
 ├── index.html              # Main homepage
 ├── success.html            # Form success page
 ├── manifest.json           # PWA manifest
-├── sw.js                   # Service worker
 ├── css/
 │   ├── style.css          # Main stylesheet
 │   ├── responsive.css     # Responsive design
