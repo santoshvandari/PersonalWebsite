@@ -145,7 +145,7 @@ header nav {
     display: flex;
     list-style: none;
     gap: 40px;
-    counter-reset: menu; /* ensure menu numbering starts at 0 for the header */
+    counter-reset: menu -1; /* start from 0 (first increment shows 0) */
 }
 
 .nav-links li {
@@ -171,7 +171,7 @@ header nav {
 }
 
 .nav-link::before {
-    content: '0' counter(menu,zero) '.';
+    content: '0'counter(menu) '.'; /* show 0,1,2... without hard prefix */
     counter-increment: menu;
     color: var(--accent-color);
     font-size: 12px;
