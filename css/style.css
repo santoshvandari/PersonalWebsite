@@ -171,7 +171,7 @@ header nav {
 }
 
 .nav-link::before {
-    content: '0' counter(menu) '.';
+    content: '0' counter(menu,zero) '.';
     counter-increment: menu;
     color: var(--accent-color);
     font-size: 12px;
