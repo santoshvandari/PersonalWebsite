@@ -14,7 +14,8 @@
         terminalTyping: document.getElementById('terminal-typing'),
         contactForm: document.querySelector('.contact-form'),
         cursorTrail: document.querySelector('.cursor-trail'),
-        matrixBg: document.getElementById('matrix-bg')
+        matrixBg: document.getElementById('matrix-bg'),
+        dateEl: document.getElementById('date')
     };
 
     // Configuration
@@ -45,6 +46,7 @@
         initializeAOS();
         initializeParallax();
         initializeSmoothScrolling();
+        initializeDate();
     }
 
     // Preloader with enhanced loading animation
@@ -435,6 +437,13 @@
                 }
             });
         }
+    }
+
+    // Initialize Date of footer
+    function initializeDate(){
+        const currentDate = new Date().getFullYear();
+        elements.dateEl.textContent=currentDate;
+
     }
 
     // Performance optimizations

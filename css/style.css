@@ -1252,6 +1252,11 @@ section {
     transform: translateY(-3px);
 }
 
+.social-link a{
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
 .social-link.twitter:hover { background: #1da1f2; }
 .social-link.github:hover { background: #333; }
 .social-link.linkedin:hover { background: #0077b5; }
