@@ -5,13 +5,11 @@
     // DOM Elements
     const elements = {
         header: document.querySelector('header'),
-        logo: document.querySelector('.logo'),
         hamburger: document.querySelector('.hamburger'),
         navLinks: document.querySelector('.nav-links'),
         preloader: document.querySelector('.preloader'),
         typingElement: document.getElementById('typing'),
         hoverElement: document.getElementById('text-hover-effect'),
-        terminalTyping: document.getElementById('terminal-typing'),
         contactForm: document.querySelector('.contact-form'),
         cursorTrail: document.querySelector('.cursor-trail'),
         matrixBg: document.getElementById('matrix-bg'),
@@ -22,9 +20,8 @@
     const config = {
         typingSpeed: 80,
         backSpeed: 60,
-        allowedChars: ['X', '$', 'Y', '#', '?', '*', '0', '1', '+', '{', '}', '<', '>', '/', '\\'],
+        allowedChars: ['X', 'Y', '#', '?', '*', '0', '1', '+', '{', '}', '<', '>', '/', '\\'],
         matrixChars: '01',
-        matrixColumns: 100,
         matrixSpeed: 50
     };
 
@@ -66,7 +63,7 @@
 
         let currentStep = 0;
         const loadingText = terminal.querySelector('.loading-text .command');
-        
+
         const showNextStep = () => {
             if (currentStep < loadingSteps.length) {
                 loadingText.textContent = loadingSteps[currentStep];
@@ -113,7 +110,6 @@
             let current = '';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
                 if (window.scrollY >= sectionTop - 200) {
                     current = section.getAttribute('id');
                 }
@@ -135,17 +131,15 @@
         if (!elements.header) return;
 
         let lastScroll = 0;
-        
+
         window.addEventListener('scroll', () => {
             const currentScroll = window.scrollY;
-            
+
             // Header background change
             if (currentScroll > 100) {
                 elements.header.classList.add('scrolled');
-                if (elements.logo) elements.logo.style.opacity = '1';
             } else {
                 elements.header.classList.remove('scrolled');
-                if (elements.logo) elements.logo.style.opacity = '0';
             }
 
             // Header hide/show on scroll
@@ -154,7 +148,7 @@
             } else {
                 elements.header.style.transform = 'translateY(0)';
             }
-            
+
             lastScroll = currentScroll;
         });
     }
@@ -163,11 +157,11 @@
     function initializeTypingAnimations() {
         // Main typing animation with fixed cursor
         if (elements.typingElement) {
-            const typed = new Typed('#typing', {
+            new Typed('#typing', {
                 strings: [
                     'Full-stack Developer',
                     'Python Developer',
-                    'JavaScript Developer', 
+                    'JavaScript Developer',
                     'ETL Developer',
                     'Backend Specialist',
                     'API Architect'
@@ -181,36 +175,6 @@
                 cursorChar: '|'
             });
         }
-
-        // Enhanced Terminal typing effect (for About section)
-        if (elements.terminalTyping) {
-            const terminalText = "Started as a curious learner, evolved into a passionate developer. Building solutions that make a difference, one line of code at a time.";
-            typeWriterEnhanced(elements.terminalTyping, terminalText, 50);
-        }
-    }
-
-    // Enhanced Typewriter effect for terminal with cursor
-    function typeWriterEnhanced(element, text, speed) {
-        let i = 0;
-        element.textContent = '';
-        element.style.borderRight = '2px solid #64ffda';
-        element.style.paddingRight = '5px';
-        
-        function type() {
-            if (i < text.length) {
-                element.textContent += text.charAt(i);
-                i++;
-                setTimeout(type, speed);
-            } else {
-                // Blinking cursor effect after typing is complete
-                setTimeout(() => {
-                    element.style.borderRight = element.style.borderRight === 'none' ? '2px solid #64ffda' : 'none';
-                    setTimeout(() => typeWriterEnhanced(element, text, speed), 3000); // Restart after 3 seconds
-                }, 500);
-            }
-        }
-        
-        type();
     }
 
     // Enhanced Hover Effects
@@ -218,11 +182,11 @@
         if (!elements.hoverElement) return;
 
         const originalText = elements.hoverElement.textContent;
-        
+
         const scrambleText = () => {
             const chars = config.allowedChars;
             let iterations = 0;
-            
+
             const interval = setInterval(() => {
                 elements.hoverElement.textContent = originalText
                     .split('')
@@ -233,18 +197,18 @@
                         return chars[Math.floor(Math.random() * chars.length)];
                     })
                     .join('');
-                
+
                 if (iterations >= originalText.length) {
                     clearInterval(interval);
                 }
-                
-                iterations += 1/3;
+
+                iterations += 1 / 3;
             }, 50);
         };
 
         // Auto-trigger on load
         setTimeout(scrambleText, 3000);
-        
+
         // Trigger on hover
         elements.hoverElement.addEventListener('mouseenter', scrambleText);
     }
@@ -270,16 +234,16 @@
         function animateTrail() {
             const diffX = mouseX - trailX;
             const diffY = mouseY - trailY;
-            
+
             trailX += diffX * 0.1;
             trailY += diffY * 0.1;
-            
+
             elements.cursorTrail.style.left = trailX + 'px';
             elements.cursorTrail.style.top = trailY + 'px';
-            
+
             requestAnimationFrame(animateTrail);
         }
-        
+
         animateTrail();
     }
 
@@ -393,7 +357,7 @@
     // Parallax Effects
     function initializeParallax() {
         const parallaxElements = document.querySelectorAll('.floating-icon');
-        
+
         window.addEventListener('scroll', () => {
             const scrolled = window.scrollY;
             parallaxElements.forEach((element, index) => {
@@ -412,7 +376,7 @@
                 if (target) {
                     const headerHeight = elements.header.offsetHeight;
                     const targetPosition = target.offsetTop - headerHeight;
-                    
+
                     window.scrollTo({
                         top: targetPosition,
                         behavior: 'smooth'
@@ -420,7 +384,7 @@
                 }
             });
         });
-        
+
         // Scroll indicator click functionality
         const scrollIndicator = document.querySelector('.scroll-indicator');
         if (scrollIndicator) {
@@ -429,7 +393,7 @@
                 if (aboutSection) {
                     const headerHeight = elements.header.offsetHeight;
                     const targetPosition = aboutSection.offsetTop - headerHeight;
-                    
+
                     window.scrollTo({
                         top: targetPosition,
                         behavior: 'smooth'
@@ -439,23 +403,12 @@
         }
     }
 
-    // Initialize Date of footer
-    function initializeDate(){
-        const currentDate = new Date().getFullYear();
-        elements.dateEl.textContent=currentDate;
-
-    }
-
-    // Performance optimizations
-    let ticking = false;
-    
-    function optimizedScrollHandler(callback) {
-        return function() {
-            if (!ticking) {
-                requestAnimationFrame(callback);
-                ticking = true;
-            }
-        };
+    // Initialize Date for footer
+    function initializeDate() {
+        if (elements.dateEl) {
+            const currentDate = new Date().getFullYear();
+            elements.dateEl.textContent = currentDate;
+        }
     }
 
     // Debounce function for resize events
@@ -483,32 +436,9 @@
         }
     }, 250));
 
-    // Service worker registration for PWA capabilities
-
     // Error handling
     window.addEventListener('error', (e) => {
         console.error('Global error:', e.error);
-    });
-
-    // Easter egg: Konami code
-    let konamiCode = [];
-    const konamiSequence = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
-    
-    document.addEventListener('keydown', (e) => {
-        konamiCode.push(e.keyCode);
-        if (konamiCode.length > konamiSequence.length) {
-            konamiCode.shift();
-        }
-        
-        if (konamiCode.toString() === konamiSequence.toString()) {
-            // Easter egg activated!
-            document.body.style.transform = 'rotate(180deg)';
-            setTimeout(() => {
-                document.body.style.transform = '';
-                alert('🎉 Backend developer secret activated! 🎉');
-            }, 2000);
-            konamiCode = [];
-        }
     });
 
 })();
