@@ -122,3 +122,47 @@ body {
     display: none;
   }
 }
+
+/* Typing Cursor */
+.cursor {
+  display: inline-block;
+  font-weight: 100;
+  animation: blink 1s step-end infinite;
+  color: var(--accent);
+  margin-left: 5px;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* Social Icons */
+.socials {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+  animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+  transform: translateY(20px);
+  animation-delay: 0.2s;
+}
+
+.social-link {
+  color: var(--text-secondary);
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-link:hover {
+  color: var(--text-primary);
+  transform: translateY(-3px);
+}
+
+.social-link svg {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+}
