@@ -2,11 +2,9 @@
 
 :root {
   --background: #f3efe6;
-  --paper-raised: #eae4d5;
   --foreground: #15130f;
   --muted: #6b6455;
   --line: #cfc6b0;
-  --line-strong: #15130f;
   --accent: #c22a1e;
   --accent-ink: #f3efe6;
 
@@ -20,7 +18,6 @@
 
 :root[data-theme="dark"] {
   --background: #15130f;
-  --paper-raised: #1c1911;
   --foreground: #f3efe6;
   --muted: #a29a86;
   --line: #3a352b;
@@ -29,12 +26,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-paper-raised: var(--paper-raised);
   --color-muted: var(--muted);
   --color-line: var(--line);
   --color-accent: var(--accent);
-  --color-accent-ink: var(--accent-ink);
-  --font-display: var(--font-display);
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
 }
@@ -87,14 +81,6 @@
 }
 
 @layer components {
-  .font-display {
-    font-family: var(--font-display);
-  }
-
-  .font-mono {
-    font-family: var(--font-mono);
-  }
-
   .type-display {
     font-family: var(--font-display);
     font-weight: 800;
@@ -148,10 +134,6 @@
   .section-inner {
     max-width: 90rem;
     margin-inline: auto;
-  }
-
-  .hairline {
-    border-color: var(--line);
   }
 
   .reveal {
@@ -265,11 +247,5 @@
     transform: scaleX(var(--progress, 0));
     transform-origin: left;
     will-change: transform;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .scroll-progress {
-      transition: none;
-    }
   }
 }
