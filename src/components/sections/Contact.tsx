@@ -30,6 +30,12 @@ export default function Contact() {
           <EditorialLink href={site.linkedin} external>
             LinkedIn
           </EditorialLink>
+          <EditorialLink href={site.blog} external>
+            Blog{" "}
+            <span className="text-muted normal-case">
+              — where I share what I&apos;m learning
+            </span>
+          </EditorialLink>
         </div>
 
         <div className="mt-20 flex flex-col gap-6 border-t border-line pt-6 sm:flex-row sm:items-end sm:justify-between md:mt-28">

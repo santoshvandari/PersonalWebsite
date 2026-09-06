@@ -17,6 +17,7 @@ export type ExperienceEntry = {
   number: string;
   role: string;
   company: string;
+  companyUrl?: string;
   date: string;
   technologies: string[];
 };
@@ -26,6 +27,7 @@ export const experience: ExperienceEntry[] = [
     number: "01",
     role: "Associate Developer",
     company: "Darse Technologies Pvt. Ltd.",
+    companyUrl: "https://darsetech.com",
     date: "January 2025 — Present",
     technologies: [
       "Python",
@@ -40,8 +42,8 @@ export const experience: ExperienceEntry[] = [
   {
     number: "02",
     role: "Contract Developer (Part-Time)",
-    company: "Connectify Solution Pvt. Ltd.",
-    date: "May 2026 — Present",
+    company: "Connectifi Solution Pvt. Ltd.",
+    date: "May 2026 — August 2026",
     technologies: [
       "Next.js",
       "React.js",
@@ -105,7 +107,6 @@ export const stack: StackGroup[] = [
       "Authorization",
       "RBAC",
       "Permissions",
-      "Google Authentication",
       "API Security",
     ],
   },

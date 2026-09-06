@@ -1,6 +1,7 @@
-import type { Metadata, Viewport } from "next";
-import { Archivo, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
-import { site } from "@/lib/site";
+import type {Metadata, Viewport} from "next";
+import {Archivo, IBM_Plex_Sans, IBM_Plex_Mono} from "next/font/google";
+import {site} from "@/lib/site";
+import {experience} from "@/lib/content";
 import EditorialNav from "@/components/navigation/EditorialNav";
 import PaperGrain from "@/components/layout/PaperGrain";
 import GridGuides from "@/components/layout/GridGuides";
@@ -39,13 +40,16 @@ export const metadata: Metadata = {
   keywords: [
     "Santosh Bhandari",
     "Python Backend Developer",
+    "Full Stack Developer",
     "FastAPI Developer",
     "Django Developer",
+    "Next.js Developer",
+    "React Developer",
     "REST API",
     "PostgreSQL",
     "Backend Engineer Nepal",
   ],
-  authors: [{ name: site.name, url: site.url }],
+  authors: [{name: site.name, url: site.url}],
   creator: site.name,
   alternates: {
     canonical: "/",
@@ -96,7 +100,7 @@ const jsonLd = {
     "@type": "PostalAddress",
     addressCountry: site.location,
   },
-  sameAs: [site.github, site.linkedin],
+  sameAs: [site.github, site.linkedin, site.blog],
   knowsAbout: [
     "Python",
     "FastAPI",
@@ -106,10 +110,13 @@ const jsonLd = {
     "Next.js",
     "React.js",
   ],
-  worksFor: {
-    "@type": "Organization",
-    name: "Darse Technologies Pvt. Ltd.",
-  },
+  worksFor: experience
+    .filter((entry) => entry.company !== "Remote")
+    .map((entry) => ({
+      "@type": "Organization",
+      name: entry.company,
+      ...(entry.companyUrl ? {url: entry.companyUrl} : {}),
+    })),
   alumniOf: [
     {
       "@type": "CollegeOrUniversity",
@@ -122,17 +129,17 @@ const jsonLd = {
   ],
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({children}: LayoutProps<"/">) {
   return (
     <html
       lang="en"
       className={`${archivo.variable} ${plexSans.variable} ${plexMono.variable}`}
     >
       <body>
-        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        <script dangerouslySetInnerHTML={{__html: themeInitScript}} />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{__html: JSON.stringify(jsonLd)}}
         />
         <a href="#main" className="skip-link">
           Skip to content

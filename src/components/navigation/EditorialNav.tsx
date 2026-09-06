@@ -88,6 +88,29 @@ export default function EditorialNav() {
           >
             {active.number} / {active.label}
           </span>
+          <a
+            href={site.blog}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="type-label hidden items-center gap-2 text-foreground transition-colors duration-200 hover:text-accent sm:inline-flex"
+          >
+            Blog
+            <span aria-hidden="true" className="text-accent">
+              →
+            </span>
+          </a>
+          <a
+            href={site.cv}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="type-label flex items-center gap-2 text-foreground transition-colors duration-200 hover:text-accent"
+          >
+            <span aria-hidden="true" className="text-accent">
+              ↓
+            </span>
+            <span className="hidden sm:inline">Download CV</span>
+            <span className="sm:hidden">CV</span>
+          </a>
           <ThemeToggle />
           <button
             ref={toggleRef}
