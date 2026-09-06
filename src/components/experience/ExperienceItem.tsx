@@ -23,7 +23,18 @@ export default function ExperienceItem({
           <h3 className="type-heading text-[clamp(1.6rem,3vw,2.5rem)]">
             {entry.role}
           </h3>
-          <p className="type-label mt-2 text-accent">{entry.company}</p>
+          {entry.companyUrl ? (
+            <a
+              href={entry.companyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="type-label mt-2 inline-block text-accent underline decoration-transparent underline-offset-4 transition-colors duration-200 hover:decoration-accent"
+            >
+              {entry.company}
+            </a>
+          ) : (
+            <p className="type-label mt-2 text-accent">{entry.company}</p>
+          )}
           <p className="type-label mt-6 text-muted normal-case">
             {entry.technologies.join(" · ")}
           </p>

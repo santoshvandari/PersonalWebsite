@@ -18,7 +18,7 @@ export default function Intro() {
     >
       <p
         aria-hidden="true"
-        className="ghost-numeral top-[8%] right-[var(--edge)] text-[28vw] sm:top-[12%]"
+        className="ghost-numeral top-[8%] right-(--edge) text-[28vw] sm:top-[12%]"
       >
         01
       </p>
