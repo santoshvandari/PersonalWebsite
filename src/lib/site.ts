@@ -10,6 +10,6 @@ export const site = {
   github: "https://github.com/santoshvandari",
   linkedin: "https://linkedin.com/in/santoshvandari",
   cv: "/files/cv.pdf",
-  blog: "https://pythonfordeveloper.com",
+  blog: "https://blog.bhandari-santosh.com.np",
   year: new Date().getFullYear(),
 } as const;
